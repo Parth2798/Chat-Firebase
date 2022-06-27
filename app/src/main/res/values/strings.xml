@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ChateModule</string>
+    <string name="chat_demo">Chat Demo</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_username_email_mobile">Enter Email</string>
+    <string name="registration">Registration</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="story_view_fragment">Story View Fragment</string>
+    <string name="friend_group_fragment">Friend Group Fragment</string>
+    <string name="name">Name :</string>
+    <string name="user_id">User ID :</string>
+    <string name="email">Email :</string>
+    <string name="mobile">Mobile :</string>
+    <string name="create_group">Create Group</string>
+    <string name="create">Create</string>
+    <string name="edit">Edit</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="login_with">Login With</string>
+    <string name="phone_number">Phone :</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="send_verification_code">Send Verification Code</string>
+    <string name="verifyOtp">Verify OTP</string>
+    <string name="online">Online</string>
+    <string name="_15_23">July 15:23</string>
+    <string name="enter_group_name">Enter Group Name</string>
+
+</resources>

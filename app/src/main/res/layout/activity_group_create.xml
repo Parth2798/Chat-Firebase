@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onCLick"
+            type="com.weapp.chatemodule.callbacks.CommonBtnClick" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:clipToPadding="false"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:contentInsetEndWithActions="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:titleMarginTop="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.weapp.chatemodule.customeClass.MagicTextView
+                        android:id="@+id/txtTitile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_25sdp"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:onClick="@{(v)->onCLick.ClickData(v)}"
+                        android:shadowColor="@color/black"
+                        android:shadowRadius="20"
+                        android:text="@string/create_group"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_40sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                    <com.weapp.chatemodule.customeClass.MagicTextView
+                        android:id="@+id/create"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:onClick="@{(v)->onCLick.ClickData(v)}"
+                        android:shadowColor="@color/black"
+                        android:shadowRadius="20"
+                        android:text="@string/create"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_40sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:showIn="@layout/activity_main">
+
+            <com.weapp.chatemodule.customeClass.roundImage.RoundedImageView
+                android:id="@+id/profile"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:onClick="@{(v)-> onCLick.ClickData(v)}"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintDimensionRatio="100:100"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/bgGroupName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_oval="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bgGroupName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_group_name"
+                android:textColorHint="@color/blue"
+                app:layout_constraintLeft_toRightOf="@+id/profile"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etGroupName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/blue"
+                    android:textColorHint="@color/blue"
+                    android:textSize="@dimen/_30sdp"
+                    tools:ignore="SpUsage" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/grey_200"
+                app:layout_constraintTop_toBottomOf="@+id/bgGroupName" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

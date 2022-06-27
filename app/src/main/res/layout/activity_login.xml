@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onCLick"
+            type="com.weapp.chatemodule.callbacks.CommonBtnClick" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_marginRight="@dimen/_50sdp"
+                    android:layout_marginBottom="@dimen/_80sdp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="@dimen/_20sdp"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_50sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivLogo"
+                            android:layout_width="@dimen/_300sdp"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/_40sdp"
+                            android:background="@drawable/ic_launcher_background"
+                            app:layout_constraintDimensionRatio="512:512"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.weapp.chatemodule.customeClass.MagicTextView
+                            android:id="@+id/txtLoginWith"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:text="@string/login_with"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_35sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+                            tools:ignore="SpUsage" />
+
+                        <RadioGroup
+                            android:id="@+id/radio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtLoginWith">
+
+                            <RadioButton
+                                android:id="@+id/radioEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="@string/email" />
+
+                            <RadioButton
+                                android:id="@+id/radioPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_30sdp"
+                                android:layout_marginLeft="@dimen/_30sdp"
+                                android:text="@string/phone_number" />
+
+                        </RadioGroup>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/mainPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/radio">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:hint="@string/enter_mobile_number"
+                                android:textColorHint="@color/blue"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etlMobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtOtp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:hint="@string/enter_otp"
+                                android:textColorHint="@color/blue"
+                                android:visibility="gone"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtMobile">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etOtp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/btnPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_50sdp"
+                                android:background="@drawable/buttons"
+                                android:onClick="@{(v)-> onCLick.ClickData(v)}"
+                                android:padding="@dimen/_10sdp"
+                                android:text="@string/send_verification_code"
+                                android:textAllCaps="false"
+                                android:textColor="@android:color/background_light"
+                                android:textSize="@dimen/_30sdp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtOtp"
+                                tools:ignore="SpUsage" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/mainEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/radio">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtUserName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:hint="@string/enter_username_email_mobile"
+                                android:textColorHint="@color/blue"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etUserName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:hint="@string/password"
+                                android:textColorHint="@color/blue"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtUserName"
+                                app:passwordToggleEnabled="true">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etPassword"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textPassword"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnLogin"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_50sdp"
+                                android:onClick="@{(v)-> onCLick.ClickData(v)}"
+                                app:backgroundTint="@color/blue"
+                                app:layout_constraintDimensionRatio="36:36"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtPassword" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ok"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:background="@drawable/ic_done"
+                                android:elevation="@dimen/_50sdp"
+                                android:onClick="@{(v)-> onCLick.ClickData(v)}"
+                                app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
+                                app:layout_constraintLeft_toLeftOf="@+id/btnLogin"
+                                app:layout_constraintRight_toRightOf="@+id/btnLogin"
+                                app:layout_constraintTop_toTopOf="@+id/btnLogin" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.weapp.chatemodule.customeClass.MagicTextView
+                        android:id="@+id/btnForgotPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:onClick="@{(v)-> onCLick.ClickData(v)}"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowRadius="2"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_36sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btnSignUp"
+                        app:strokeColor="@color/blue"
+                        app:strokeWidth="@dimen/_1sdp"
+                        tools:ignore="SpUsage" />
+
+                    <com.weapp.chatemodule.customeClass.MagicTextView
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:onClick="@{(v)-> onCLick.ClickData(v)}"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowRadius="2"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_36sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/btnForgotPassword"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:strokeColor="@color/blue"
+                        app:strokeWidth="@dimen/_1sdp"
+                        tools:ignore="SpUsage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</layout>

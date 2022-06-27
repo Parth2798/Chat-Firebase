@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_35sdp">
+
+        <RelativeLayout
+            android:id="@+id/rlMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_150sdp"
+            android:background="@drawable/chate_right_user_bg">
+
+            <com.weapp.chatemodule.customeClass.MagicTextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="Sakariya Parth"
+                android:textColor="@color/grey_800"
+                android:textSize="@dimen/_25sdp"
+                tools:ignore="SpUsage" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mediaBg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_500sdp"
+                android:visibility="gone"
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_below="@id/txtName">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_500sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    android:scaleType="fitXY"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/videoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_500sdp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mediaBg"
+                android:orientation="horizontal">
+
+                <com.weapp.chatemodule.customeClass.MagicTextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:alpha="0.6"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_1sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text="20/12/2020"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@id/txtMsg"
+                    app:layout_constraintRight_toRightOf="@+id/txtMsg"
+                    tools:ignore="SpUsage" />
+
+                <com.weapp.chatemodule.customeClass.MagicTextView
+                    android:id="@+id/txtMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="Hii &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_30sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpUsage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.weapp.chatemodule.customeClass.MagicTextView
+                android:id="@+id/txtTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mediaBg"
+                android:layout_alignEnd="@+id/mediaBg"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:alpha="0.6"
+                android:visibility="gone"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_1sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="italic"
+                tools:ignore="SpUsage" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/imgDialogBg"
+            android:layout_width="@dimen/_720sdp"
+            android:layout_height="0dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="728:1280"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="@dimen/_50sdp"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        tools:ignore="UnusedAttribute">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/_50sdp">
+
+                            <com.weapp.chatemodule.customeClass.MagicTextView
+                                android:id="@+id/txtEditProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_38sdp"
+                                android:gravity="center"
+                                android:text="@string/edit_profile"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_48sdp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="SpUsage" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtfUserName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:hint="@string/enter_first_name"
+                                android:textColorHint="@color/blue"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txtEditProfile">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etfUserName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtlUserName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:hint="@string/enter_last_name"
+                                android:textColorHint="@color/blue"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtfUserName">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etlUserName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/bgEtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_40sdp"
+                                android:visibility="gone"
+                                android:hint="@string/enter_mobile_number"
+                                android:textColorHint="@color/blue"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtlUserName">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etlMobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textColorHint="@color/blue"
+                                    android:textSize="@dimen/_35sdp"
+                                    tools:ignore="SpUsage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/btnSignUp"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_50sdp"
+                                app:backgroundTint="@color/blue"
+                                app:layout_constraintDimensionRatio="36:36"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/bgEtMobile" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ok"
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:background="@drawable/ic_done"
+                                android:elevation="@dimen/_50sdp"
+                                app:layout_constraintBottom_toBottomOf="@+id/btnSignUp"
+                                app:layout_constraintLeft_toLeftOf="@+id/btnSignUp"
+                                app:layout_constraintRight_toRightOf="@+id/btnSignUp"
+                                app:layout_constraintTop_toTopOf="@+id/btnSignUp" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

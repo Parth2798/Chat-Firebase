@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fd5331</color>
+    <color name="colorPrimaryDark">#bbfd5331</color>
+    <color name="colorAccent">#fd5331</color>
+
+    <color name="fab_orange_bright">#fd5331</color>
+    <color name="white">#ffffff</color>
+    <color name="pink">#FF4081</color>
+
+    <color name="black">#000000</color>
+
+    <color name="astronautBlue">#1c5260</color>
+    <color name="mosque">#004E61</color>
+    <color name="whiteSmoke">#F9F9F9</color>
+    <color name="blueViolet">#B951EC</color>
+    <color name="electricBlue">#9efff5</color>
+    <color name="veryLightGrey">#cccccc</color>
+    <color name="mortar">#575757</color>
+    <color name="dimGray">#666666</color>
+    <color name="lavenderBlush">#ffebf5</color>
+    <color name="torchRed">#FD135B</color>
+    <color name="charcoal">#434343</color>
+    <color name="gainsBoro">#DCDCDC</color>
+    <color name="botticelli">#9AB1B7</color>
+    <color name="paradiso">#4E7982</color>
+    <color name="deepBlush">#E76C8B</color>
+    <color name="crimson">#DC1127</color>
+    <color name="radicalRed">#f93270</color>
+    <color name="bunker">#2C2F34</color>
+    <color name="spunPearl">#ADADB6</color>
+    <color name="redOrange">#FF3232</color>
+    <color name="darkSalmon">#e58c77</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="pink_light">#74FFCDD2</color>
+    <color name="fruitSalad">#4CAF50</color>
+    <color name="otpVerify">#8EA9B0</color>
+
+    <color name="golden_fizz">#EBFE35</color>
+    <color name="spun_pearl">#ADACB1</color>
+    <color name="mine_shaft">#3C3C3C</color>
+    <color name="nobel">#B2B2B2</color>
+
+    <color name="blue">#022B52</color>
+    <color name="red">#510022</color>
+    <color name="dialogTrans">#4D000000</color>
+
+    <color name="colorIndivateTab">#FFFFFF</color>
+    <color name="colorCardView">#f7f7f7</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_500">#a4a4a4</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_800">#212121</color>
+</resources>

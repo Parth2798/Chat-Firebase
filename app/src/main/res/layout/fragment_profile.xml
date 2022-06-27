@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="click"
+            type="com.weapp.chatemodule.callbacks.CommonBtnClick" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.weapp.chatemodule.customeClass.roundImage.RoundedImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:onClick="@{(v)->click.ClickData(v)}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/Name"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="end|center"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtName"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtName"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/Name"
+            app:layout_constraintTop_toBottomOf="@+id/profile"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/ID"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="end|center"
+            android:text="@string/user_id"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtID"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtID"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/txtID"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/ID"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/Email"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="end|center"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtEmail"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/Email"
+            app:layout_constraintTop_toBottomOf="@+id/txtID"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/Mobile"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="end|center"
+            android:text="@string/mobile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtMobile"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtMobile"
+            tools:ignore="SpUsage" />
+
+        <com.weapp.chatemodule.customeClass.MagicTextView
+            android:id="@+id/txtMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/Mobile"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/imgEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:onClick="@{(v)->click.ClickData(v)}"
+            android:text="@string/edit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtMobile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
